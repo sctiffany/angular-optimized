@@ -1,0 +1,23 @@
+<div class="app">
+  <h1>
+    Quel est l’impact des optimisations modernes sur les performances web ?
+    Étude comparative entre Vue.js, React et Angular à travers un benchmark
+    synthétique
+  </h1>
+
+  <div class="infos-container">
+    <div class="flex-col-justify-between">
+      <img src="assets/logo.png" class="logo" alt="logo" />
+      <app-filter (orderChange)="onOrderChange($event)"></app-filter>
+    </div>
+
+    <app-performance-stats></app-performance-stats>
+  </div>
+
+  <div class="img-container">
+    <app-image-square
+      *ngFor="let img of allImages"
+      [src]="img"
+    ></app-image-square>
+  </div>
+</div>
