@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ChangeDetectionStrategy  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl:'./filter.html',
-  styleUrls: ['./filter.css']
+  styleUrls: ['./filter.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FilterComponent {
   @Output() orderChange = new EventEmitter<'asc' | 'desc'>();
