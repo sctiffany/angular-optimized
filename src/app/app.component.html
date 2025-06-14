@@ -10,14 +10,14 @@
       <img src="assets/logo.png" class="logo" alt="logo" />
       <app-filter (orderChange)="onOrderChange($event)"></app-filter>
     </div>
-
     <app-performance-stats></app-performance-stats>
   </div>
 
   <div class="img-container">
     <app-image-square
-      *ngFor="let img of allImages"
+      *ngFor="let img of allImages; trackBy: trackByIndex"
       [src]="img"
     ></app-image-square>
   </div>
+  <div #scrollAnchor style="height: 1px"></div>
 </div>
